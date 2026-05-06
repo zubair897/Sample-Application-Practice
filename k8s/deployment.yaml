@@ -4,6 +4,7 @@ metadata:
   name: ai-app
 spec:
   replicas: 3
+<<<<<<< HEAD
 
   strategy:
     type: RollingUpdate
@@ -15,6 +16,13 @@ spec:
     matchLabels:
       app: ai-app
 
+=======
+  strategy:
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app: ai-app
+>>>>>>> d7f1e05 (initial commit)
   template:
     metadata:
       labels:
@@ -22,6 +30,7 @@ spec:
     spec:
       containers:
       - name: ai-app
+<<<<<<< HEAD
         image: ai-app:latest
         imagePullPolicy: Never
         ports:
@@ -32,3 +41,8 @@ spec:
             path: /
             port: 3000
           initialDelaySeconds: 5
+=======
+        image: ai-app
+        ports:
+        - containerPort: 3000
+>>>>>>> d7f1e05 (initial commit)
